@@ -1,0 +1,20 @@
+<% title "Holiday" %>
+
+<p>
+  <strong>Datefrom:</strong>
+  <%=h @holiday.datefrom %>
+</p>
+<p>
+  <strong>Dateto:</strong>
+  <%=h @holiday.dateto %>
+</p>
+
+<p>
+  <strong>Number of Days Requested:</strong>
+  <%=h @holiday.number_of_days %>
+</p>
+<p>
+  <%= link_to "Edit", edit_holiday_path(@holiday) %> |
+  <%= link_to "Destroy", @holiday, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", holidays_path %>
+</p>

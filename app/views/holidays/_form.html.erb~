@@ -1,0 +1,16 @@
+<% form_for @holiday do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :datefrom %><br />
+    <%= f.date_select :datefrom %>
+  </p>
+  <p>
+    <%= f.label :dateto %><br />
+    <%= f.date_select :dateto %>
+  </p>
+  <p>
+    <%= f.label :number_of_days %><br />
+    <%= f.text_field :number_of_days %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

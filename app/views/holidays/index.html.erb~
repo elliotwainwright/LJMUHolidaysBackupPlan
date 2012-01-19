@@ -1,0 +1,22 @@
+<% title "Holidays" %>
+
+<table>
+  <tr>
+    <th>Date From</th>
+    <th>Number of Days</th>
+    <th>Date To</th>
+
+  </tr>
+  <% for holiday in @holidays %>
+    <tr>
+      <td><%=h holiday.datefrom %></td>
+      <td><%=h holiday.dateto %></td>
+      <td><%=h holiday.number_of_days.to_s %></td>
+      <td><%= link_to "Show", holiday %></td>
+      <td><%= link_to "Edit", edit_holiday_path(holiday) %></td>
+      <td><%= link_to "Destroy", holiday, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Holiday", new_holiday_path %></p>

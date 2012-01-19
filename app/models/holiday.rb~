@@ -1,0 +1,4 @@
+class Holiday < ActiveRecord::Base
+  attr_accessible :datefrom, :dateto, :number_of_days
+  validates_presence_of :number_of_days
+end
